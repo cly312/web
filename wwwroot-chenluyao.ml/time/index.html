@@ -1,0 +1,90 @@
+<title>罗盘时钟</title>
+<script src="vue.js"></script>
+<style>
+    *{margin: 0;padding: 0;}
+    body{background-color: #000000;}
+    #app{
+        position: relative;
+    }
+    .s,.i,.h,.w,.d,.m,.y{
+        position: absolute;
+        top: 320px;
+        left: 600px;
+        transition:transform 1s;
+        color: #999999;
+        font-size: 9px;
+    }
+    .xx,.y{
+        color: #FF0000;
+        font-size: 9.5px;
+        font-weight: bold;
+    }
+</style> </head> <body> <div id="app"> <div class="s"
+                                            v-bind:class="{xx:60-v==s}"
+                                            v-for="(v,k) in 60"
+                                            v-bind:style="{transform:'translate('+xc(sr,v+s,60)+'px,'+yc(sr,v+s,60)+'px) rotate('+dg(v+s,60)+'deg)'}">{{zh(60-v,1)}}秒</div> <div class="i" v-for="(v,k) in 60"
+                                                                                                                                                                                 v-bind:class="{xx:60-v==i}"
+                                                                                                                                                                                 v-bind:style="{transform:'translate('+xc(ir,v+i,60)+'px,'+yc(ir,v+i,60)+'px) rotate('+dg(v+i,60)+'deg)'}">{{zh(60-v,1)}}分</div> <div class="h" v-for="(v,k) in 24"
+                                                                                                                                                                                                                                                                                                                      v-bind:class="{xx:24-v==h}"
+                                                                                                                                                                                                                                                                                                                      v-bind:style="{transform:'translate('+xc(hr,v+h,24)+'px,'+yc(hr,v+h,24)+'px) rotate('+dg(v+h,24)+'deg)'}">{{zh(24-v,1)}}时</div> <div class="w" v-for="(v,k) in 7"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                           v-bind:class="{xx:7-v==w}"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                           v-bind:style="{transform:'translate('+xc(wr,v+w,7)+'px,'+yc(wr,v+w,7)+'px) rotate('+dg(v+w,7)+'deg)'}">星期{{wk[7-v]}}</div> <div class="d" v-for="(v,k) in 31"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           v-bind:class="{xx:31-k==d}"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           v-bind:style="{transform:'translate('+xc(dr,k+d,31)+'px,'+yc(dr,k+d,31)+'px) rotate('+dg(k+d,31)+'deg)'}">{{zh(31-k,1)}}日</div> <div class="m" v-for="(v,k) in 12"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                v-bind:class="{xx:12-k==m+1}"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                v-bind:style="{transform:'translate('+xc(mr,k+m+1,12)+'px,'+yc(mr,k+m+1,12)+'px) rotate('+dg(k+m+1,12)+'deg)'}">{{zh(12-k,1)}}月</div> <div class="y"> {{y}}年 </div> </div> <script>
+var mv=new Vue({
+    el:'#app',
+    data:{
+        PI:Math.PI,
+        s:0,
+        i:0,
+        h:0,
+        d:0,
+        m:0,
+        y:0,
+        w:0,
+        sr:280,
+        ir:230,
+        hr:190,
+        wr:155,
+        dr:110,
+        mr:60,
+        wk:['日','一','二','三','四','五','六']
+    },
+    created() {
+        setInterval(()=>{
+            var date=new Date()
+            this.y=date.getFullYear()
+        this.m=date.getMonth()
+        this.d=date.getDate()
+        this.w=date.getDay()
+        this.h=date.getHours()
+        this.i=date.getMinutes()
+        this.s=date.getSeconds()
+        Math.cos()
+
+    },1000)
+    },
+    methods:{
+        xc(r,k,l){
+            return r*Math.cos(2*k*this.PI/l)
+        },
+        yc(r,k,l){
+            return r*Math.sin(2*k*this.PI/l)
+        },
+        dg(k,l){
+            return k*360/l
+        },
+        zh(num,type){
+            switch(type){
+                case 1:
+                    var t1=['零','一','二','三','四','五','六','七','八','九','十']
+                    var sw=parseInt(num/10)
+                    var gw=num%10
+                    return (sw!=0?t1[sw]+'十':'')+(gw!=0?t1[gw]:(sw==0?t1[0]:''))
+                    break
+            }
+        }
+    }
+})</script> </body> </html>
