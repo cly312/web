@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <meta charset="UTF-8"> 
+    <title>陳路垚的個人網站</title>
+    <meta name="theme-color" content="#ffc91d">
+    <link rel="icon" href="index_files/images/32.png" sizes="32x32">
+    <link rel="icon" href="index_files/images/192.png" sizes="192x192">
+    <link href="index_files/css/kico.css" rel="stylesheet" type="text/css">
+    <link href="index_files/css/paul.css" rel="stylesheet" type="text/css">
+    <link href="index_files/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1">
+	<script>
+		!function(e, t, a) {
+			function r() {
+				for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+				requestAnimationFrame(r)
+			}
+			function n() {
+				var t = "function" == typeof e.onclick && e.onclick;
+				e.onclick = function(e) {
+					t && t(),
+						o(e)
+				}
+			}
+			function o(e) {
+				var a = t.createElement("div");
+				a.className = "heart",
+					s.push({
+						el: a,
+						x: e.clientX - 5,
+						y: e.clientY - 5,
+						scale: 1,
+						alpha: 1,
+						color: c()
+					}),
+					t.body.appendChild(a)
+			}
+			function i(e) {
+				var a = t.createElement("style");
+				a.type = "text/css";
+				try {
+					a.appendChild(t.createTextNode(e))
+				} catch(t) {
+					a.styleSheet.cssText = e
+				}
+				t.getElementsByTagName("head")[0].appendChild(a)
+			}
+			function c() {
+				return "rgb(" + ~~ (255 * Math.random()) + "," + ~~ (255 * Math.random()) + "," + ~~ (255 * Math.random()) + ")"
+			}
+			var s = [];
+			e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame ||
+				function(e) {
+					setTimeout(e, 1e3 / 60)
+				},
+				i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),
+				n(),
+				r()
+		} (window, document);
+	</script>
+</head>
+<body>
+<aside class="sidebar">
+    <div class="avatar">
+        <img src="index_files/images/avatar.jpg" title="陳路垚">
+    </div>
+    <nav class="nav">
+        <a href="#info">個人資料</a>
+        <a href="#skills">掌握的技能</a>
+        <a href="#works">旗下網站</a>
+        <a href="#story">個人經歷</a>
+		<a href="#downloads">相關下載</a>
+    </nav>
+</aside>
+<main>
+	<details style="margin-left: 70%;">
+		<summary>繁体中文</summary>
+			<a href="index.html">简体中文</a>
+            <br>
+			<a href="index-en.html">English</a>
+	</details>
+    <section id="info">
+        <div class="wrap">
+            <h2 class="title">個人資料</h2>
+            <div class="row">
+                <div class="col-l-4">
+                    <p>姓名：陳路垚</p>
+                    <p>性別：男</p>
+                    <p>年齡：12</p>
+                    <p>學歷：小學</p>
+					<p>生日：2011/03/12</p>
+                </div>
+                <div class="col-l-4">
+                    <p>QQ：<a href="https://qm.qq.com/cgi-bin/qm/qr?k=KfvEExfbXbUhqUZ1P0qcYM8WYDesEg-u&noverify=0&personal_qrcode_source=1" target="_blank">282753431</a></p>
+                    <p>微信：ntxiaoyu518</p>
+                    <p>主頁：<a href="https://chenluyao.ml">chenluyao.ml</a></p>
+                    <p>郵箱：<a href="mailto:i@chenluyao"target="_blank">i@chenluyao.ml</a></p>
+					<p>telegram：<a href="https://t.me/cly312" target="_blank">cly312</a></p>
+					<p>B站：<a href="https://space.bilibili.com/1909227879" target="_blank">yao_垚垚</a></p>
+                </div>
+                <div class="col-l-4">
+                    <p>我是一個熱愛鉆研計算機技術的六年級童鞋。如果你支持我可以<a href="https://afdian.net/a/chenluyao" target="_blank">贊助一下</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="wrap">
+            <h2 class="title">掌握的技能</h2>
+            <div class="row scrollable">
+                <div class="col-s-6 col-m-4 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa fa-html5"></i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>HTML 5 CSS3 JavaScript</h3>
+                        <p>熟悉網站的架構和開發</p>
+                    </div>
+                </div>
+                <div class="col-s-6 col-m-4 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>C++</h3>
+                        <p>熟悉使用C++寫一些小程序和游戲</p>
+                    </div>
+                </div>
+                <div class="col-s-6 col-m-4 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>Python</h3>
+                        <p>能使用 Python 制作簡單的程序、游戲</p>
+                    </div>
+                </div>
+				<div class="col-s-6 col-m-4 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>Scratch</h3>
+                        <p>使用Scratch制作游戲</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="works">
+        <div class="wrap">
+            <h2 class="title">旗下網站</h2>
+            <div class="row">
+                <div class="col-s-6">
+                    <div class="works-item">
+                        <p><a href="http://guochenhao.ml" target="_blank">郭宸淏(guochenhao.ml)</a></p>
+                    </div>
+                </div>
+                <div class="col-s-6">
+                    <div class="works-item">
+                        <p><a href="https://chenluyao.ml/time" target="_blank">羅盤時鐘(chenluyao.ml/time)</a></p>
+                    </div>
+                </div>
+              </div>
+            </div>       
+    </section>
+	<!-- 旗下网站代码结束 -->
+		<!-- 个人经历代码开始 -->
+    <section id="story">
+        <div class="wrap">
+            <h2 class="title">個人經歷</h2>
+            <div class="row">
+                <div class="col-m-8">
+                    <ul class="timeline">
+                        <li>2018年：走進網絡</li>
+                        <li>2019年：走進C++編程</li>
+                        <li>盡情期待 
+                        <li>
+                        <li>
+                        <li>
+                        <li>
+                        <li>
+                        <li>
+                        <li>
+                    </ul>
+                </div>
+                <div class="col-m-4 center-fixed">
+                    <img src="index_files/images/story.png">
+                </div>
+            </div>
+        </div>
+    </section>
+	<section id="downloads">
+        <div class="wrap">
+            <h2 class="title">相關下載</h2>
+            <div class="row">
+                <p>本站及旗下網站全部免費開源，也開發出了同步軟件：支持Android、HarmonyOS和Windows(其它平臺正在開發，不計劃支持ios)。
+					<br>
+					github<a href="https://github.com/cly312/web" target="_blank">項目地址</a>
+					、gitee<a href="https://gitee.com/cly312/web/tree/main" target="_blank">項目地址</a>
+					、123盤<a href="https://www.123pan.com/s/0kU0Vv-uRvg3" target="_blank">下載地址</a>
+				<br><br>
+				如果下載鏈接不可用，請聯系站長。
+				</p>
+            </div>
+        </div>
+    </section>
+  
+</main>
+<script data-cfasync="false" src="index_files/js/email-decode.min.js"></script><script src="js/kico.js"></script>
+<script src="index_files/js/paul.js"></script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5b8626705cec1a357a9db7cf6075c2cb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  
+ </body>
+</html>
