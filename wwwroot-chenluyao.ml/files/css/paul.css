@@ -119,7 +119,7 @@ main section{
 #info{ background: url(../images/bg-1.png) fixed; }
 #skills{ background: #f8bd24; }
 #works{ background: url(../images/bg-2.png) fixed; }
-#team{ background: url(../images/bg-3.png) fixed; }
+#downloads{ background: url(../images/bg-3.png) fixed; }
 
 .title{
     margin-bottom: 1em;
@@ -142,7 +142,7 @@ main section{
 #story .title:before{
     content: "\f0b1";
 }
-#team .title:before{
+#downloads .title:before{
     content: "\f024";
 }
 
