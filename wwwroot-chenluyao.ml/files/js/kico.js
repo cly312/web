@@ -1,15 +1,4 @@
-/* ----
 
-# Kico Style 1.5.3
-# By: Dreamer-Paul
-# Last Update: 2017.2.5
-
-一个简洁、有趣的开源响应式框架，仅包含基础样式，需按照一定规则进行二次开发。
-
-欢迎你加入缤奇，和我们一起改变世界。
-本代码为奇趣保罗原创，并遵守 MIT 开源协议。欢迎访问我的博客：https://paugram.com
-
----- */
 
 var kico = {};
 
@@ -132,5 +121,5 @@ function bk_image(selector) {
 
 // 请保留版权说明
 if (window.console && window.console.log) {
-    console.log("\n %c Kico Style %c https://www.binkic.com \n\n","color: #fff; background: #3498db; padding: 5px 0;","background: #efefef; padding: 5px 0; text-decoration: none;");
+    console.log("\n %c Kico Style %c https://chenluyao.ml \n\n","color: #fff; background: #3498db; padding: 5px 0;","background: #efefef; padding: 5px 0; text-decoration: none;");
 }
